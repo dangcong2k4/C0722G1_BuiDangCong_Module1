@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <td>From Currency</td>
+            <td>To Currency</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><input id="sotien" type="text" name="" size="35"></th>
+            <td>
+                <select id="vnd">
+                 <option value="VND">VND</option>
+                 <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="usd"><option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </td>
+            <td><input type="button" value="Convert" onclick="tien()"></td>
+        </tr>
+        <tr>
+            <td colspan="4" id="display"></td>
+        </tr>
+    </table>
+
+</body>
+<script>
+    function tien() {
+        let so = +document.getElementById("sotien").value;
+        let VND = document.getElementById("vnd").value;
+        let USD = document.getElementById("usd").value;
+        var Result;
+            if (VND == "VND" && USD == "USD") {
+                Result = "Result:" + (so/23000) + "$";
+            }
+            else if (VND == "USD" && USD =="VND") {
+                Result = "Result:" + (so*23000) + "VND"
+            }
+            else if (VND == "VND" && VND == "VND"){
+                Result = "Result:" + (so) + "VND"
+            }
+            else if (USD == "USD" && USD == "USD"){
+                Result = "Result:" + (so) + "$"
+            }
+        document.getElementById("display").innerHTML = Result;
+
+
+    }
+
+</script>
+</html>

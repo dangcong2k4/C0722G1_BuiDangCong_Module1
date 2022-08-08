@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="so1" placeholder="Nhập số thứ nhất">
+    <input type="number" id="so2" placeholder="Nhập số thứ hai">
+    <button onclick="sub()">cộng</button>
+    <button onclick="sub()">trừ</button>
+    <div id="result"> kết qua</div>
+</body>
+<script>
+    function sub(){
+        let number1 = +document.getElementById("so1").value;
+        let number2 = +document.getElementById("so2").value;
+        let result;
+        if (number1 == "so1" && number2 == "so2"){
+            result = "Result:" (number(number1) + number(number2));
+        }
+        else if (number1 == "so1" && number2 == "so2"){
+            result = "Result:" (number(number1) - number(number2));
+        }
+       document.getElementById("result").innerHTML = result;
+    }
+</script>
+</html>
