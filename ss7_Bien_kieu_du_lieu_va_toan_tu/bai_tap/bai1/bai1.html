@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <section>
+        <form action="" name="dataform">
+                <label>môn toán:</label><br>
+                <input  id="toan" type = "text" name="toan" size="15"/><br>
+                <label>Điểm môn vật :</label><br>
+                <input id="ly" type = "text" name="vatly" size="15"/><br>
+                <label>Điểm môn hóa học:</label><br>
+                <input  id="hoa" type = "text" name="hoahoc" size="15"><br>
+                <input type="button" value="tinhtrungbinh" onclick="tinh()">
+            <br><br><br>
+                <label>Độ C</label><br>
+                <input id="Do C" type="text" name="Do C" size="5"/><br>
+                <input type="button" value="Độ F " onclick="Doi()">
+            <br><br><br>
+                <label>Bán kinh </label><br>
+                <input id="R" type="text" name="" size="5 "/><br>
+                <input type="button" value="Diện tích hình tròn " onclick="Dien()">
+            <br><br><br>
+                <label>Đường kính </label><br>
+                <input id="D" type="text" name="" size="5"/><br>
+                <input type="button" value="chu vi hình tròn " onclick="chuvi()">
+        </form>
+    </section>
+</body>
+<script>
+    function tinh(){
+        let toan = +document.getElementById("toan").value;
+        let ly = +document.getElementById("ly").value;
+        let hoa = +document.getElementById("hoa").value;
+
+        let tong =(toan+ly+hoa)
+        alert("dtb "+tong/3);
+    }
+
+    function Doi(){
+        let C = +document.getElementById("Do C").value;
+        let F ;
+        F = ((9*C)+160)/5;
+        alert("Độ F" +F);
+    }
+    function Dien(){
+        let R = +document.getElementById("R").value;
+        let S;
+        S = R*R*3.14;
+        alert("Diện Tích" +S)
+    }
+    function chuvi(){
+        let D = +document.getElementById("D").value;
+        let P;
+        P = D*3.14;
+        alert("chu vi" +P)
+    }
+</script>
+</html>
