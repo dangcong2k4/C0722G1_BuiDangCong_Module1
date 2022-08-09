@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section>
+    <form action="" name="form">
+        <label>Điền số cân nặng của bạn vào đây:(kg)</label><br>
+        <input id="KG" type="text" name="cân nặng"><br>
+        <label>Điền số đo chiều cao của bạn vào đây:(m)</label><br>
+        <input id="M" type="text" name="chiều cao"><br>
+        <input type="button" value="kiểm tra" onclick="test()">
+    </form>
+</section>
+</body>
+<script>
+    function test() {
+        let Kg = +document.getElementById("KG").value;
+        let m = +document.getElementById("M").value;
+        let BMI;
+        BMI = Kg/(Math.pow(m,2));
+        if (BMI < 18.5){
+            alert('thiếu cân: ' + BMI);
+        }else if (BMI < 25) {
+            alert('bình thường: ' + BMI);
+        }else if (BMI < 30){
+            alert('thừa cân: ' + BMI);
+        }else {
+            alert('béo phì: ' + BMI);
+        }
+
+    }
+</script>
+</html>
