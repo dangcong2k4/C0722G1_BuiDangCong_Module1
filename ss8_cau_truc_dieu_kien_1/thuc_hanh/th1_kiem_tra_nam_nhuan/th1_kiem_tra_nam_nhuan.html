@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let năm = prompt("nhập năm")
+    let sonam = false
+    if (năm %4 == 0) {
+        if (năm %100 == 0){
+            if (năm %400 == 0){
+                isyear = true;
+            }
+        }
+        else{sonam= true;
+        }
+
+    }
+    if (sonam){
+        alert(năm + " là năm nhuận");
+    }
+    else {
+        alert(năm + " không phải là năm nhuận")
+    }
+</script>
+</html>
