@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số phút thực hiện cuộc goi: </label>
+    <label><input id="SP" type="text"></label><br>
+
+    <label>tiền cước khi thực hiện cuộc gọi: 1 phút hết 2000đ</label><br>
+
+    <input type="button" value="tính tiền" onclick="kiemTra()">
+    <p id="result">số tiền cước sau khi thực hiện cuộc gọi là: </p>
+</body>
+<script>
+    function kiemTra() {
+        let soPhut = document.getElementById("SP").value;
+        let tienCuoc;
+        tienCuoc = soPhut*2000;
+        document.getElementById("result").innerHTML = "số tiền cước sau khi thực hiện cuộc gọi là:" + tienCuoc
+
+    }
+</script>
+</html>

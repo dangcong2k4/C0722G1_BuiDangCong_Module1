@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số lượng sản phẩm bán được: </label>
+    <label><input id="SP" type="text"></label><br>
+    <label>giá tiền của sản phẩm : 100</label><br>
+    <label>phần trăm tiền hoa hồng: </label>
+    <select>
+        <option>0-100 : 1%</option>
+        <option>100-1000 : 2%</option>
+        <option>>1000 : 3%</option>
+    </select><br>
+
+    <input type="button" value="tính tiền" onclick="kiemTra()">
+    <p id="result">số tiền hoa hồng là : </p>
+</body>
+<script>
+    function kiemTra() {
+        let sanPham = +document.getElementById("SP").value;
+        let tienHoaHong;
+        if (sanPham > 1000){
+            tienHoaHong = sanPham*100*(3/100);
+            document.getElementById("result").innerHTML = "số tiền hoa hồng là: " + tienHoaHong;
+            }else  if (sanPham > 100){
+            tienHoaHong = sanPham*100*(2/100);
+            document.getElementById("result").innerHTML = "số tiền hoa hồng là: " + tienHoaHong;
+            }else {
+            tienHoaHong = sanPham*100*(1/100);
+            document.getElementById("result").innerHTML = "số tiền hoa hồng là: " + tienHoaHong;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>điểm các bài kiểm tra: </label>
+    <label><input id="diem1" type="text"></label><br>
+    <label>điểm thi giữa kỳ: </label>
+    <label><input id="diem2" type="text"></label><br>
+    <label>điểm thi cuối kỳ: </label>
+    <label><input id="diem3" type="text"></label><br>
+    <input type="button" value="kiểm tra" onclick="hocLuc()">
+    <p id="result" >Đáp án </p>
+</body>
+<script>
+    function hocLuc() {
+        let diem1 = +document.getElementById("diem1").value;
+        let diem2 = +document.getElementById("diem2").value;
+        let diem3 = +document.getElementById("diem3").value;
+        let diemTB;
+        diemTB = (diem1 + diem2*2 + diem3*3)/6;
+        if (diemTB >= 8){
+            document.getElementById("result").innerHTML = "Học lực giỏi ";
+        } else if (diemTB >= 6.5 ){
+            document.getElementById("result").innerHTML = "Học lực khá ";
+        }else if (diemTB >= 5 ){
+            document.getElementById("result").innerHTML =  "Học lực trung bình ";
+        }else {
+            document.getElementById("result").innerHTML = "Học lực yếu ";
+        }
+    }
+</script>
+</html>

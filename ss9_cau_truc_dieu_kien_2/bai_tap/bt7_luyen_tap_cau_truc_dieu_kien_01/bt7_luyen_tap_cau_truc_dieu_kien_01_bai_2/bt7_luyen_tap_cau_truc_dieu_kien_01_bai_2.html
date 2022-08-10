@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <label>nhập tuổi của bạn: </label>
+        <input id="tuoi" type="text"><br>
+        <input type="button" value="kiểm tra" onclick="kiemTra()">
+        <p id="result">Kết quả</p>
+    </form>
+</body>
+    <script>
+        function kiemTra() {
+            let soTuoi = +document.getElementById("tuoi").value;
+            if (soTuoi >= 15){
+                document.getElementById("result").innerHTML = "Đủ điều kiện để vào học lớp 10 "
+                }else {
+                document.getElementById("result").innerHTML = "Không đủ điều kiện để vào bọc lớp 10 "
+                }
+
+        }
+    </script>
+</html>

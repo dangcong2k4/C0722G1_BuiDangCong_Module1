@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <label>số a: </label>
+        <input id="soa" type="text"><br>
+        <label>số b: </label>
+        <input id="sob" type="text"><br>
+        <input type="button" value="kiểm tra" onclick="kiemtra()">
+        <p id="result">Đáp án </p>
+    </form>
+</body>
+<script>
+    function kiemtra() {
+    let a = +document.getElementById("soa").value;
+    let b = +document.getElementById("sob").value;
+    if (a%b === 0){
+        document.getElementById("result").innerHTML = "số a chia hết cho số b ";
+        }else {
+        document.getElementById("result").innerHTML = "số a không chia hết cho số b ";
+        }
+    }
+</script>
+</html>

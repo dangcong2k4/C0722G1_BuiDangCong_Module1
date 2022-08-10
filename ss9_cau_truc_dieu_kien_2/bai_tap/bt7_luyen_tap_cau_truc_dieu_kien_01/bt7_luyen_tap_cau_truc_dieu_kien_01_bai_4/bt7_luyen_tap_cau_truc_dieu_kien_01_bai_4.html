@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số nguyên 1: </label>
+    <label><input id="so1" type="text"></label><br>
+    <label>số nguyên 2: </label>
+    <label><input id="so2" type="text"></label><br>
+    <label>số nguyên 3: </label>
+    <label><input id="so3" type="text"></label><br>
+    <input type="button" value="kiểm tra" onclick="timSoLonNhat()">
+<p id="result" >Đáp án </p>
+</body>
+<script>
+    function timSoLonNhat() {
+        let soA = +document.getElementById("so1").value;
+        let soB = +document.getElementById("so2").value;
+        let soC = +document.getElementById("so3").value;
+        if (soA > soB){
+            if (soA > soC){
+                document.getElementById("result").innerHTML = "số " + soA + " là số lớn nhất "
+            }else {
+                document.getElementById("result").innerHTML = "số " + soC + " là số lớn nhất "
+            }
+
+        }else if (soB > soC){
+            document.getElementById("result").innerHTML = "số " + soB + " là số lớn nhất "
+        }else {
+            document.getElementById("result").innerHTML = "số " + soC + " là số lớn nhất"
+        }
+
+    }
+</script>
+</html>
