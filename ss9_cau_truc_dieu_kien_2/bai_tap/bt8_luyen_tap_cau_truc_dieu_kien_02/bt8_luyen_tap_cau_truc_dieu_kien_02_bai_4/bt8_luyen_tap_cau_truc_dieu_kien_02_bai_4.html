@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>chiều dài cạnh hình chữ nhật :</label>
+    <input id="doDai" type="text"><br>
+    <label>chiều rộng cạnh hình chữ nhật :</label>
+    <input id="doRong" type="text"><br>
+    <input type="button" value="tính" onclick="dienTich()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function dienTich() {
+        let chieuRong = document.getElementById("doRong").value;
+        let chieuDai = document.getElementById("doDai").value;
+
+        let dienTich;
+        dienTich = chieuDai*chieuRong
+        document.getElementById("result").innerHTML = "diện tích là : " + dienTich + " mét vuông";
+    }
+</script>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số tự nhiên :</label>
+    <input id="so" type="text"><br>
+    <input type="button" value="kiểm tra" onclick="soTuNhien()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function soTuNhien() {
+        let soTuNhien = document.getElementById("so").value;
+        if (soTuNhien > 0 && soTuNhien <= 120){
+            document.getElementById("result").innerHTML = soTuNhien + " là số tuổi"
+        }else {
+            document.getElementById("result").innerHTML = soTuNhien + " không phải là số tuổi"
+        }
+
+
+    }
+</script>
+</html>

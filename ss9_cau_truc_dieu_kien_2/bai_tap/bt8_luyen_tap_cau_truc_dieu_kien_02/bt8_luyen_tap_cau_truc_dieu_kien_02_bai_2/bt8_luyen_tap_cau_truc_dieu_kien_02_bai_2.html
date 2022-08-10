@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>độ dài (m) :</label>
+    <input id="doDai" type="text"><br>
+    <input type="button" value="Đổi sang feet" onclick="doiFeet()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function doiFeet() {
+        let m = document.getElementById("doDai").value;
+        let ft;
+        ft = m * 3.2808;
+        document.getElementById("result").innerHTML = "kết quả là : " + ft + " feet";
+    }
+</script>
+</html>

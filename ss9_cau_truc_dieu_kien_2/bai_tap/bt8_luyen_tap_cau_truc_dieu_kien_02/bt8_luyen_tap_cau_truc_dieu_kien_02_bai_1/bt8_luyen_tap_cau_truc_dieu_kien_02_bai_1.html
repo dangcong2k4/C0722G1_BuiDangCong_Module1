@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>nhập độ C :</label>
+    <input id="doC" type="text"><br>
+    <input type="button" value="Đổi độ F" onclick="doiDo()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function doiDo() {
+        let doC = document.getElementById("doC").value;
+        let doF;
+        doF = (doC*9)/5 + 32;
+        document.getElementById("result").innerHTML = "Độ F là :" + doF;
+
+    }
+</script>
+</html>

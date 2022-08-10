@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>chiều dài cạnh kề a :</label>
+    <input id="canhA" type="text"><br>
+    <label>chiều rộng cạnh kề b :</label>
+    <input id="canhB" type="text"><br>
+    <input type="button" value="tính" onclick="dienTich()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function dienTich() {
+        let canhKeA = document.getElementById("canhA").value;
+        let canhKeB = document.getElementById("canhB").value;
+
+        let dienTich;
+        dienTich = (canhKeA*canhKeB)/2
+        document.getElementById("result").innerHTML = "diện tích là : " + dienTich + " mét vuông";
+    }
+</script>
+
+</html>

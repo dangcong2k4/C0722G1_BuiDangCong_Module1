@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>độ dài cạnh hình vuông :</label>
+    <input id="doDai" type="text"><br>
+    <input type="button" value="tính" onclick="dienTich()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function dienTich() {
+        let doDaiCanh = document.getElementById("doDai").value;
+        let dienTich;
+        dienTich = Math.pow(doDaiCanh,2)
+        document.getElementById("result").innerHTML = "diện tích là : " + dienTich + " mét vuông";
+    }
+</script>
+
+</html>

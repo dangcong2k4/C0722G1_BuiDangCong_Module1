@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số a :</label>
+    <input id="a" type="text"><br>
+    <label>số b :</label>
+    <input id="b" type="text"><br>
+    <label>số c :</label>
+    <input id="c" type="text"><br>
+    <input type="button" value="kiểm tra" onclick="ketQua()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function ketQua() {
+        let soA = +document.getElementById("a").value;
+        let soB = +document.getElementById("b").value;
+        let soC = +document.getElementById("c").value;
+        if (soA,soB,soC > 0 && (soA + soB)>soC && (soC + soB)>soA && (soA + soC)>soB){
+            document.getElementById("result").innerHTML = "a,b,c tạo thành một tam giác"
+        }else {
+            document.getElementById("result").innerHTML = "a,b,c không tạo thành một tam "giác
+        }
+    }
+
+</script>
+</html>

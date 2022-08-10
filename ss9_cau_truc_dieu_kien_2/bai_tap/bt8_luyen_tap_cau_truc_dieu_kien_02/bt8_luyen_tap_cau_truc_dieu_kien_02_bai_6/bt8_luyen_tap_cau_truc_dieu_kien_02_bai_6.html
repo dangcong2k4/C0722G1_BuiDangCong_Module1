@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số a :</label>
+    <input id="a" type="text"><br>
+    <label>số b :</label>
+    <input id="b" type="text"><br>
+    <input type="button" value="giải phương trình" onclick="ketQua()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function ketQua() {
+        let soA = document.getElementById("a").value;
+        let soB = document.getElementById("b").value;
+
+        let X;
+        X = (-soB)/soA
+        document.getElementById("result").innerHTML = "Nghiệm x = " + X ;
+    }
+</script>
+</html>
