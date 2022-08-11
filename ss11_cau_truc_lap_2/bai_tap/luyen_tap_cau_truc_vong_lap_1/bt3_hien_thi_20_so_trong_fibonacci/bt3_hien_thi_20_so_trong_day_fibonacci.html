@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fibonacci = 0;
+    let i;
+    let number1 = 0;
+    let number2 = 1;
+    document.write(fibonacci +"<br>")
+    for (i = 1; i < 21; i++){
+           fibonacci = number2 + number1;
+        document.write(number1+ "+" + number2 + "=" + fibonacci + "<br>");
+        number1 = number2;
+        number2 = fibonacci ;
+    }
+    // document.getElementById("result").innerHTML = text;
+</script>
+</body>
+</html>
