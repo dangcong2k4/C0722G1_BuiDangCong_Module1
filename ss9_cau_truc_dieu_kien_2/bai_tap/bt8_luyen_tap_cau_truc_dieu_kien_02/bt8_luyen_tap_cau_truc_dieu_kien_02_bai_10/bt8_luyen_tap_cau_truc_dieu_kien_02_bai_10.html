@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số kWh :</label>
+    <input id="kwh" type="text"><br>
+    <input type="button" value="tính tiền" onclick="ketQua()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function ketQua() {
+        let kWH = document.getElementById("kwh").value;
+        let soTien;
+        if (kWH >= 300){
+            soTien = kWH*2.834;
+            document.getElementById("result").innerHTML = "số tiền điện là :" + soTien + " VND";
+        }else  if (kWH >= 200){
+            soTien = kWH*2.536;
+            document.getElementById("result").innerHTML = "số tiền điện là :" + soTien + " VND ";
+        }else if (kWH >= 100){
+            soTien = kWH*2.014;
+            document.getElementById("result").innerHTML = "số tiền điện là :" + soTien + " VND ";
+        }else if (kWH >= 50){
+            soTien = kWH*1.734;
+            document.getElementById("result").innerHTML = "số tiền điện là :" + soTien + " VND ";
+        }else {
+            soTien = kWH*1.678;
+            document.getElementById("result").innerHTML = "số tiền điện là :" + soTien + " VND ";
+        }
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số tiền thu nhập hàng tháng :</label>
+    <input id="tienThuNhap" type="text"><br>
+    <input type="button" value="tính tiền thuế" onclick="ketQua()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function ketQua() {
+        let soTien = document.getElementById("tienThuNhap").value;
+        let tienThue;
+        if (tienThue >= 80){
+            tienThue = soTien*(35/100);
+            document.getElementById("result").innerHTML = "số tiền là :" + tienThue + " VND";
+        }else  if (soTien >= 52){
+            tienThue = soTien*(30/100);
+            document.getElementById("result").innerHTML = "số tiền là :" + tienThue + " VND ";
+        }else if (soTien >= 32){
+            tienThue = soTien*(25/100);
+            document.getElementById("result").innerHTML = "số tiền là :" + tienThue + " VND ";
+        }else if (soTien >= 18){
+            tienThue = soTien*(20/100);
+            document.getElementById("result").innerHTML = "số tiền là :" + tienThue + " VND ";
+        }else {
+            tienThue = soTien*(5/100);
+            document.getElementById("result").innerHTML = "số tiền là :" + tienThue + " VND ";
+        }
+
+
+    }
+</script>
+</html>
