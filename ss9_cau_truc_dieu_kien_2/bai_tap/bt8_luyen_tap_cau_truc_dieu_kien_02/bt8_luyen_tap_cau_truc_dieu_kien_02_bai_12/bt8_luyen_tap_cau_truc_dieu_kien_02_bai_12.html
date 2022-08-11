@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>số tiền gửi ngân hàng :</label>
+    <input id="tienGui" type="text"><br>
+    <label>số tháng gửi ngân hàng :</label>
+    <input id="soThangGui" type="text"><br>
+    <input type="button" value="tính tiền lãi" onclick="ketQua()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function ketQua() {
+        let soTienGui = document.getElementById("tienGui").value;
+        let soThangGui = document.getElementById("soThangGui").value;
+        let tienLai;
+        tienLai = soThangGui*soTienGui*(3/100)/12
+        document.getElementById("result").innerHTML ="số tiền lãi : "+tienLai
+    }
+</script>
+</html>
