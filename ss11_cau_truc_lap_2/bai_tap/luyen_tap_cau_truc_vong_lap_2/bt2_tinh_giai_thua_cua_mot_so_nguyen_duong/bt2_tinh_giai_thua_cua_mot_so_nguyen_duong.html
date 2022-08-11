@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label>Nhập số :</label>
+    <input id="so" type="text"><br>
+    <input type="button" value="tính" onclick="ketQua()">
+    <p id="result">kết quả</p>
+</body>
+<script>
+    function ketQua() {
+        let number = 0;
+        let number1 = 1;
+        let so = document.getElementById("so").value;
+        for (let i = 1; i <= so; i++) {
+            number = number1*i;
+            number1 = number;
+
+        }document.getElementById("result").innerHTML = number
+
+    }
+</script>
+</html>
