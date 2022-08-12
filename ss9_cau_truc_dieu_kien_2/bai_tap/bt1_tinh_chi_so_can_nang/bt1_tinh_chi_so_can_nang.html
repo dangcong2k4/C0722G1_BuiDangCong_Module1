@@ -18,10 +18,10 @@
 </body>
 <script>
     function test() {
-        let Kg = +document.getElementById("KG").value;
+        let kg = +document.getElementById("KG").value;
         let m = +document.getElementById("M").value;
         let BMI;
-        BMI = Kg/(Math.pow(m,2));
+        BMI = kg/(Math.pow(m,2));
         if (BMI < 18.5){
             alert('thiếu cân: ' + BMI);
         }else if (BMI < 25) {

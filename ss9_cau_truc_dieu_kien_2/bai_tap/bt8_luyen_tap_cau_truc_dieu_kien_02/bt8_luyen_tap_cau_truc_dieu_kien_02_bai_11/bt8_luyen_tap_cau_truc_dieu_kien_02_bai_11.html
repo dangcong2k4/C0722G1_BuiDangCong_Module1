@@ -14,7 +14,7 @@
     function ketQua() {
         let soTien = document.getElementById("tienThuNhap").value;
         let tienThue;
-        if (tienThue >= 80){
+        if (soTien >= 80){
             tienThue = soTien*(35/100);
             document.getElementById("result").innerHTML = "số tiền là :" + tienThue + " VND";
         }else  if (soTien >= 52){
