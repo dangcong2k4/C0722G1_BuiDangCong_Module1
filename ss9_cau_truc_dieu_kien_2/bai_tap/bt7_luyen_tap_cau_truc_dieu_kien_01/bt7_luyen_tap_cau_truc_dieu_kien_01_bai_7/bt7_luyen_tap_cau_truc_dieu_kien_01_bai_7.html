@@ -8,7 +8,6 @@
     <label>số phút thực hiện cuộc goi: </label>
     <label><input id="SP" type="text"></label><br>
 
-    <label>tiền cước khi thực hiện cuộc gọi: 1 phút hết 2000đ</label><br>
 
     <input type="button" value="tính tiền" onclick="kiemTra()">
     <p id="result">số tiền cước sau khi thực hiện cuộc gọi là: </p>
@@ -17,8 +16,16 @@
     function kiemTra() {
         let soPhut = document.getElementById("SP").value;
         let tienCuoc;
-        tienCuoc = soPhut*2000;
-        document.getElementById("result").innerHTML = "số tiền cước sau khi thực hiện cuộc gọi là:" + tienCuoc
+        if (soPhut >= 10){
+            tienCuoc = soPhut*1200;
+            document.getElementById("result").innerHTML = "số tiền cước sau khi thực hiện cuộc gọi là:" + tienCuoc
+        }else if (soPhut >= 5){
+            tienCuoc = soPhut*1500;
+            document.getElementById("result").innerHTML = "số tiền cước sau khi thực hiện cuộc gọi là:" + tienCuoc
+        }else {
+            tienCuoc = soPhut*2000;
+            document.getElementById("result").innerHTML = "số tiền cước sau khi thực hiện cuộc gọi là:" + tienCuoc
+        }
 
     }
 </script>

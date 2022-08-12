@@ -16,10 +16,14 @@
     function ketQua() {
         let soA = document.getElementById("a").value;
         let soB = document.getElementById("b").value;
+        let x;
+        if (soA != 0){
+            x = (-soB)/soA
+            document.getElementById("result").innerHTML = "Nghiệm x = " + x ;
+        }else {
+            document.getElementById("result").innerHTML = "vô nghiệm";
+        }
 
-        let X;
-        X = (-soB)/soA
-        document.getElementById("result").innerHTML = "Nghiệm x = " + X ;
     }
 </script>
 </html>
