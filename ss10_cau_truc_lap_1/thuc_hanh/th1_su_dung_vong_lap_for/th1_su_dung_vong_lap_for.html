@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Sự dụng vòng lặp for</h2>
+<label id="result"></label><br>
+<input id="nhap" type="text"><br>
+<input type="button" value="tính" onclick="ketQua()">
+<p id="tinh">kết quả</p>
+</body>
+<script>
+    let text ="";
+    let so;
+    for (so = 0; so < 5; so++){
+        text += "số đó là :" + so +"<br>";
+    }
+    document.getElementById("result").innerHTML = text;
+    function ketQua() {
+        let num = document.getElementById("nhap").value;
+        let total = 0;
+        let i = 1;
+        for (;i <=num; i+=1){
+            total = total+ i;
+
+        }
+        document.getElementById("tinh").innerHTML = total;
+    }
+</script>
+</html>
