@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let soChinhXac = 15;
+    for (let i = 1; i <=3 ; i++) {
+        let soCuaBan = prompt("hãy nhập số của bạn");
+        if (soCuaBan == soChinhXac){
+            alert("bạn dã đoán đúng");
+            break;
+        }else if (soCuaBan < soChinhXac){
+            alert("số của bạn bé hơn đáp án")
+        }else {
+            alert("số của bạn lớn hơn đáp án")
+        }
+    }
+</script>
+
+</body>
+</html>
