@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soTienGui = +prompt("số tiền gửi");
+    let soThangGui = +prompt("số tháng gửi");
+    let tienLai;
+    let soTienCuoiCung;
+    for (let i = 1; i <=soThangGui ; i++) {
+        tienLai = soTienGui*i*(1/100);
+        soTienCuoiCung = soTienGui + tienLai;
+        soTienGui = soTienCuoiCung;
+    }
+    alert(soTienCuoiCung);
+</script>
+</body>
+</html>
