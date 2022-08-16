@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("nhập độ dài của mảng")
+    let x = new Array(num)
+    for (let j = 0; j < x.length ; j++) {
+        let n = +prompt("nhập phần tử mảng")
+        x[j]= n;
+    }
+
+    let tong = 0;
+    let count = 0;
+    for (let i = 0; i < x.length; i++) {
+        if (x[i]%2 ==1 || i%2 ==0){
+            tong = tong + x[i]
+            count++;
+        }
+    }
+    document.write("gia tri trung binh la : " + tong/count);
+
+</script>
+</body>
+</html>

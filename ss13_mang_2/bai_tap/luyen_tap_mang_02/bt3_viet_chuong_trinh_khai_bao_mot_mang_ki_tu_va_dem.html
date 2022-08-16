@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = [1,'f','e',4,6,8,'7','l','o',17]
+    // let so=[0,1,2,3,4,5,6,7,8,9]
+    let count = 0;
+    for (let i = 0; i <x.length ; i++) {
+        var arr = +x[i];
+        if (!(isNaN(arr))){
+        // if (so.includes(+x[i]) ){
+            document.write(arr + "<br>");
+            count ++;
+        }
+    }
+    document.write("<br>"+"số kí tự số trong mảng là : " + count);
+</script>
+</body>
+</html>

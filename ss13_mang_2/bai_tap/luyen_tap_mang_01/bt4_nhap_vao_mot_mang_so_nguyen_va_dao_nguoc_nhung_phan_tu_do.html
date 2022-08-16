@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<p id="daoNguoc"></p>
+<script>
+    let x = [];
+    // let tr = x.split('');
+    let num = prompt("nhâp dộ dài mảng");
+    let i = 0;
+    while (i < num){
+        let n = prompt("nhập phần tử mảng")
+        x.push(n);
+        i++
+    }
+
+    let first = 0;
+    let last = x.length - 1;
+    document.getElementById("result").innerHTML = x.toString();
+    while (first < last) {
+        let b = x[first];
+        x[first] = x[last];
+        x[last] = b;
+        first++;
+        last--;
+    }
+    document.getElementById("daoNguoc").innerHTML = x.toString();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [1,2,3,4,5,6,7,8,9,10];
+    let index = 0;
+    let soMax = number[0];
+    for (let i = 1; i < number.length ; i++) {
+        if (number[i] > soMax){
+            soMax = number[i];
+            index++;
+        }
+    }document.write("số lớn nhất là : " + soMax +"<br>")
+    let tong = 0;
+    for (let j = 0; j < number.length ; j++) {
+        tong = tong + number[j]
+    }
+    document.write("giá trị trung bình là : " + tong/number.length);
+</script>
+</body>
+</html>

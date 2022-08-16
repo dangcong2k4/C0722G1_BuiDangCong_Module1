@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = [1,3,23,43,4,83,44,89,33,8]
+    let index = 0;
+    let soMax = number[0]
+    for (let i = 1; i <number.length ; i++) {
+        if (number[i] > soMax){
+            soMax = number[i];
+            index++;
+            var viTri = index;
+        }
+    }document.write("số lớn nhất là : " + soMax + " vị trí : " + viTri )
+</script>
+</body>
+</html>

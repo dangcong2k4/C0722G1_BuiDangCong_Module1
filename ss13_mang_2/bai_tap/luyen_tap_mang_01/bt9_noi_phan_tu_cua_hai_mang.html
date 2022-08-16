@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập độ dài của mảng A");
+    let arrA = new Array(a);
+    for (let i =0; i < arrA.length ; i++) {
+        arrA[i] = +prompt("nhập phần tử của mảng thứ: " +i);
+
+
+    }
+    let b = +prompt("nhập độ dài của mảng B");
+    let arrB = new Array(b);
+    for (let i = 0; i < arrB.length ; i++) {
+        arrB[i] = +prompt("nhập phần tử thứ "+ i );
+
+
+    }
+
+    arrC = [arrA,arrB]
+    document.write("mảng C :" + arrC)
+
+</script>
+</body>
+</html>
