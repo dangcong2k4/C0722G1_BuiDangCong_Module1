@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+        let eng = ["hello", "student", "bye", "teacher"];
+        let vie = ["xin chào", "học sinh ", "tạm biệt ", "giáo viên"];
+        let e = prompt("nhập tiếng anh ")
+
+        let count ;
+        let kiemTra = false
+        for (let i = 0; i < eng.length; i++) {
+            if (e === eng[i]) {
+                kiemTra = true
+                count = i;
+                break;
+            }
+        }
+        if(kiemTra){
+            document.write(vie[count])
+        } else {
+            document.write("không có từ này trong từ điển")
+        }
+
+</script>
+</body>
+</html>
