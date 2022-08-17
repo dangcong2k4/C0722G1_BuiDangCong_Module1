@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>d</title>
+</head>
+<body>
+<script>
+    let chuThuong =['a','b','c','d','e','f','g','h','i','k','l','m','n','o','p','u','v','x','z','s','j','r','t','y','w'];
+    let chuHoa = ['A','B','C','D','E','F','G','H','I','K','L','M','N','O','P','Q','U','V','X','Z','S','J','R','T','Y','W'];
+    let str = prompt("nhập chuỗi ");
+    let arr = str.split('');
+    let arr1 = [];
+    for (let i = 0; i <arr.length ; i++) {
+        if(chuHoa.includes(arr[i])){
+            arr1 += arr[i].toLowerCase();
+        }
+        if(chuThuong.includes(arr[i])){
+            arr1 += arr[i].toUpperCase();
+        }
+    }document.write(arr1);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let i = [1,2,4,5,8,6,3,8,2];
+    let result = [i[0]];
+
+    for (let j = 0; j <i.length ; j++) {
+        if(i[j]%2 == 0 && i[j+1]%2==0){
+          result.push('-',i[j+1]);
+        }else{
+            result.push(i[j+1]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>
