@@ -7,11 +7,16 @@
 <body>
 <script>
     function giaiThua(so) {
+        let dem = 1;
+        let tich;
         for (let i = 1; i <=so ; i++) {
-            
+            tich = dem*i;
+            dem = tich;
         }
+        alert("giai thừa của số đó là : " + tich);
 
     }
+    giaiThua(+prompt("nhập số để tính giai thừa"));
 </script>
 </body>
 </html>

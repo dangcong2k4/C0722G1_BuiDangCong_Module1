@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function cacSoNguyen(so1,so2,so3) {
+        if (so1 < so2){
+            if (so1 < so3){
+                alert("Số nhỏ nhất là " + so1);
+            }else {
+                alert("Số nhỏ nhất là " + so3);
+            }
+        }else {
+            if (so2 < so3){
+                alert("Số nhỏ nhất là " + so2);
+            }else {
+                alert("Số nhỏ nhất là " + so3);
+            }
+        }
+
+    }
+    cacSoNguyen(+prompt("nhập số thứ nhất "),+prompt("nhập số thứ hai "),+prompt("nhập số thứ ba "))
+</script>
+</body>
+</html>

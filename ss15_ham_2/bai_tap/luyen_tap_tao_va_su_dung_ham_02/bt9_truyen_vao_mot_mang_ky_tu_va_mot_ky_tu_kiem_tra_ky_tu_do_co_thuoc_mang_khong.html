@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(x,V) {
+        let count = 0;
+        let check = false;
+        for (let i = 0; i<x.length; i++){
+            if (x[i] == V) {
+                count++;
+                check = true;
+            }
+        }
+        if(check) {
+            return count;
+        }else {
+            return -1;
+        }
+    }
+    let mang=[];
+    let doDai = +prompt("nhâp dộ dài mảng");
+    let i = 0;
+    while (i < doDai){
+        let phanTu = +prompt("nhập phần tử mảng")
+        mang.push(phanTu);
+        i++
+    }
+    let soV = +prompt("nhập số V");
+    document.write(kiemTra(mang,soV));
+</script>
+</body>
+</html>

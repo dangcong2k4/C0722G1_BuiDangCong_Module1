@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timNgoiSao(ngoiSao,chomSao,ten) {
+        let count ;
+
+        let kiemTra = false
+        for (let i = 0; i < chomSao.length; i++) {
+            if (ten === ngoiSao[i]) {
+                kiemTra = true
+                count = i;
+                break;
+            }
+        }
+        if (kiemTra){
+            return chomSao[count];
+        }else{
+            return "không có ngôi sao này!"
+        }
+    }
+    let cacNgoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let cacChomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let nhapTen = prompt("nhập tên một ngôi sao : ")
+    document.write(timNgoiSao(cacNgoiSao,cacChomSao,nhapTen))
+
+</script>
+</body>
+</html>
