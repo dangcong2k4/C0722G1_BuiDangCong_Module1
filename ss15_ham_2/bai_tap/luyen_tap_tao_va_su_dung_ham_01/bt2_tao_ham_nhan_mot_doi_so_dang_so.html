@@ -5,14 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<p id="result" onclick="tangSo()"></p>
 <script>
-    let number = +prompt("nhap so cua ban");
-    function tangSo() {
-        number+=1
-    }document.getElementById("result").innerHTML = number ;
-    tangSo()
 
+    function tangSo(number) {
+        number +=1;
+        return number;
+    }
+    let number = +prompt("nhap so cua ban");
+    alert(tangSo(number));
 </script>
 </body>
 </html>

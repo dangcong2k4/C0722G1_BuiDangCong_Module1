@@ -6,28 +6,28 @@
 </head>
 <body>
 <script>
-    function daoNguoc(x) {
+    function daoNguoc(arr) {
         let first = 0;
-        let last = x.length - 1;
+        let last = arr.length - 1;
         while (first < last) {
             let b = x[first];
-            x[first] = x[last];
-            x[last] = b;
+            arr[first] = arr[last];
+            arr[last] = b;
             first++;
             last--;
         }
         return x;
 
     }
-    let xs=[];
+    let mang=[];
     let doDai = +prompt("nhâp dộ dài mảng");
     let i = 0;
     while (i < doDai){
-        let phanTu = prompt("nhập phần tử mảng")
-        xs.push(phanTu);
+        let phanTu = prompt("nhập phần tử mảng");
+        mang.push(phanTu);
         i++
     }
-    document.write(daoNguoc(xs));
+    document.write(daoNguoc(mang));
 </script>
 </body>
 </html>

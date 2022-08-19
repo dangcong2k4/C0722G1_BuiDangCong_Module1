@@ -8,20 +8,13 @@
 <script>
     let meter = +prompt("nhập số mét ");
     let feet = +prompt("nhập số feet ");
-    meterToFoot(meter);
-
-
+   document.write(meterToFoot(meter)+"<br>");
+   document.write(footToMeter(feet));
     function meterToFoot(meter) {
-
-        foot = 3.279*meter;
-        document.write(meter+" meter"+" = "+foot+" foot"+"<br>");
-
+        return  3.279*meter;
     }
-    footToMeter(feet);
     function footToMeter(feet) {
-
-        meter = 0.305*feet;
-        document.write(feet+" foot"+" = "+meter+" meter");
+        return  0.305*feet;
     }
 
 </script>
