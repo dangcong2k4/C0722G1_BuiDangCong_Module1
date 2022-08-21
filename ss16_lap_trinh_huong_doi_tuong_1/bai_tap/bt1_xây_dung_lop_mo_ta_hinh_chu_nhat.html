@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="DemoCanvas" width="500" height="600"></canvas>
+
+
+</body>
+<script>
+
+    class ChuNhat {
+        constructor(dai, rong) {
+            this.chieuDai = dai;
+            this.chieuRong = rong;
+        }
+        getChieuDai() {
+            return this.chieuDai;
+        }
+        getChieuRong() {
+            return this.chieuRong;
+        }
+        setChieuDai(chieuDai) {
+            this.chieuDai = chieuDai;
+        }
+        setChieuRong(chieuRong) {
+            this.chieuRong = chieuRong;
+        }
+        dienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+        chuVi() {
+            return (this.chieuDai + this.chieuRong) * 2;
+        }
+        veHinh(toaDoX, toaDoY) {
+            let canvas = document.getElementById("DemoCanvas");
+            let ctx = canvas.getContext('2d');
+            ctx.fillStyle = 'black';
+            ctx.fillRect(toaDoX, toaDoY, this.chieuDai, this.chieuRong);
+        }
+    }
+    let chuNhat1 = new ChuNhat(400,400);
+    chuNhat1.veHinh(300,300);
+    chuNhat1.setChieuRong(400);
+    chuNhat1.setChieuDai(400);
+    alert("Diện tích chữ nhật là: "+chuNhat1.dienTich());
+    alert("Chu vi chữ nhật là: "+chuNhat1.chuVi());
+
+</script>
+</html>

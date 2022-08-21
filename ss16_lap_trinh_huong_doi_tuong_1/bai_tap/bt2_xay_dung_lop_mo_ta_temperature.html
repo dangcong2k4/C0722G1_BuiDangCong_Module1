@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    class doiDo{
+        constructor(doC) {
+            this.doC = doC;
+        }
+        doiDoK(){
+            document.write('=> độ k là :' + (this.doC + 372) + '<br>');
+        }
+        doiDoF(){
+            document.write('=> độ F là :' + (this.doC*1.8 + 32) + '<br>')
+        }
+        setDoC (){
+            this.doC = doC;
+        }
+    }
+    let nhietDo = new doiDo(25);
+    document.write('Độ C là  : ' + nhietDo.doC + '<br>');
+    nhietDo.doiDoK();
+    nhietDo.doiDoF();
+</script>
+</body>
+</html>
