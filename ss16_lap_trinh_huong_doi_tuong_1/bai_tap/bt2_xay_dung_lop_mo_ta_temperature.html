@@ -11,20 +11,26 @@
         constructor(doC) {
             this.doC = doC;
         }
+        getdoC () {
+            return this.doC ;
+        }
         doiDoK(){
-            document.write('=> độ k là :' + (this.doC + 372) + '<br>');
+            // document.write('=> độ k là :' + (this.doC + 372) + '<br>');
+            return (this.doC + 372+'<br>');
         }
         doiDoF(){
-            document.write('=> độ F là :' + (this.doC*1.8 + 32) + '<br>')
+            // document.write('=> độ F là :' + (this.doC*1.8 + 32) + '<br>')
+            return (this.doC*1.8 + 32);
         }
-        setDoC (){
+        setDoC (doC){
             this.doC = doC;
         }
     }
-    let nhietDo = new doiDo(25);
-    document.write('Độ C là  : ' + nhietDo.doC + '<br>');
-    nhietDo.doiDoK();
-    nhietDo.doiDoF();
+    let nhietDo = new doiDo();
+    nhietDo.setDoC(30);
+    document.write('Độ C là  : ' + nhietDo.getdoC() + '<br>');
+    document.write('=> độ k là :' + nhietDo.doiDoK());
+    document.write('=> độ F là :' + nhietDo.doiDoF());
 </script>
 </body>
 </html>
