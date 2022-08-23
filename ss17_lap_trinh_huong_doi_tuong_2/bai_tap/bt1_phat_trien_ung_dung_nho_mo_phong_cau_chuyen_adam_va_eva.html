@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <script>
+       class Apple{
+           constructor(weight) {
+               this.weight = weight;
+           }
+           getWeight(){
+               return this.weight;
+           }
+           setWeight(weight){
+               this.weight = weight;
+           }
+           isEmpty(){
+                if(this.weight > 0){
+                    return false;
+                }else {
+                    return true;
+                }
+           }
+           decreaseWeight(){
+               if(this.getWeight()>0){
+                   this.weight--;
+               }else {
+                   alert("số táo đã hết ") ;
+               }
+           }
+
+       }
+       class Human{
+           constructor(name,gender,weight) {
+               this.name = name;
+               this.gender = gender;
+               this.weight = weight;
+           }
+           setName(name){
+               this.name = name;
+           }
+           getName(){
+               return this.name;
+           }
+           setGender(gender){
+               this.gender = gender;
+           }
+           getGender(){
+               if(this.isMale()){
+                   return "Male";
+               }else {
+                   return "Female";
+               }
+           }
+           setWeight(weight){
+               this.weight = weight;
+           }
+           getWeight(){
+               return this.weight;
+           }
+            isMale(){
+               if(this.gender == 1){
+                   return true;
+               }else{
+                   return false;
+               }
+            }
+            say(string){
+               console.log(string);
+            }
+            checkApple(apple){
+               return apple.isEmpty();
+            }
+            eat(apple){
+               if (apple.getWeight()>0){
+                   apple.decreaseWeight();
+                   this.weight++;
+               }else{
+                   return "táo đã hết "
+               }
+            }
+           getInfo(human){
+               return (human.name + " " +human.weight + " " +human.getGender());
+           }
+       }
+       let apple = new Apple(10);
+       let adam = new Human("Adam",1,60);
+       let eva = new Human("Eva",1,50);
+       while (apple.isEmpty() !== true) {
+           document.write("Adam ăn táo" + "<br>");
+           adam.eat(apple);
+           document.write("Quả táo còn: " + "<br>");
+           document.write(apple.getWeight() + " đơn vị" + "<br>");
+           document.write( "Cân nặng của Adam là: " + adam.getWeight() + " đơn vị" + "<br>");
+           document.write("<br>")
+           document.write("Eva ăn táo" + "<br>");
+           eva.eat(apple);
+           document.write("Quả táo còn: " + "<br>");
+           document.write(apple.getWeight() + " đơn vị" + "<br>");
+           document.write( "Cân nặng eva là: " + eva.getWeight() + " đơn vị" + "<br>");
+       }
+
+   </script>
+</body>
+</html>
