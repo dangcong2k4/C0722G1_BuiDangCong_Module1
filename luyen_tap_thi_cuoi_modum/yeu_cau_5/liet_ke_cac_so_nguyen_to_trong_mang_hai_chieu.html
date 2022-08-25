@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [[2,13,3,8,5],[6,7,4,9,11]]
+    let soNguyenTo = []
+    let max =0;
+    for (let j = 0; j <arr[0].length ; j++) {
+        if(arr[0][j]>max){
+            max= arr[0][j];
+        }
+    }
+    for (let j = 0; j <arr[1].length ; j++) {
+        if (arr[1][j] > max) {
+            max = arr[1][j];
+        }
+    }
+    for (let j = 0; j <arr[0].length ; j++) {
+        let count =0;
+
+        for (let i = 1; i <=max ; i++) {
+            if (arr[0][j]%i===0){
+                count++;
+            }
+        }
+        if(count===2){
+            soNguyenTo.push(arr[0][j]);
+        }
+    }
+    for (let j = 0; j <arr[1].length ; j++) {
+        let count =0;
+
+        for (let i = 1; i <=max ; i++) {
+            if (arr[1][j]%i===0){
+                count++;
+            }
+        }
+        if(count===2){
+            soNguyenTo.push(arr[1][j]);
+        }
+    }
+    document.write(soNguyenTo);
+</script>
+</body>
+</html>
