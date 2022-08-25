@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luong = +prompt("nhập lương vào đây :")
+    let thueThuNhap;
+    let luongRong;
+    if(luong>=15000000){
+        thueThuNhap = luong*0.2;
+        luongRong = luong - thueThuNhap;
+    }else if (luong>=7000000){
+        thueThuNhap = luong*0.1;
+        luongRong = luong - thueThuNhap;
+    }else {
+        thueThuNhap = luong*0.05;
+        luongRong = luong - thueThuNhap;
+    }
+    alert("thuế thu nhập là :"+thueThuNhap);
+    alert("lương ròng là :"+luongRong);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let luaChon;
+    let tinhTien;
+    let soLuong;
+    let mang =[];
+    let tongTien = 0;
+    do {
+        luaChon = +prompt("1.Cafe \n" +
+            "2.Cam vắt \n"+
+            "3.nước ép cà rốt \n"+
+            "4.Nước ép cà chua \n"+
+            "5.nước lọc \n"+
+            "6.nước dừa \n"+"7.dừng gọi món ");
+        switch (luaChon) {
+            case 1:
+                alert("gia tien la 15000 VND");
+                soLuong = +prompt("nhap so luong");
+                tinhTien = soLuong * 15000;
+                mang.push(tinhTien);
+                alert("số tiền là "+tinhTien);
+                break;
+            case 2:
+                alert("gia tien la 10000 VND");
+                soLuong = +prompt("nhap so luong");
+                tinhTien = soLuong * 10000;
+                mang.push(tinhTien);
+                alert("số tiền là "+tinhTien);
+                break;
+            case 3:
+                alert("gia tien la 12000 VND");
+                soLuong = +prompt("nhap so luong");
+                tinhTien = soLuong * 12000;
+                mang.push(tinhTien);
+                alert("số tiền là "+tinhTien);
+                break;
+            case 4:
+                alert("gia tien la 18000 VND");
+                soLuong = +prompt("nhap so luong");
+                tinhTien = soLuong * 18000;
+                mang.push(tinhTien);
+                alert("số tiền là "+tinhTien);
+                break;
+            case 5:
+                alert("gia tien la 5000 VND");
+                soLuong = +prompt("nhap so luong");
+                tinhTien = soLuong * 5000;
+                mang.push(tinhTien);
+                alert("số tiền là "+tinhTien);
+                break;
+            case 6:
+                alert("gia tien la 14000 VND");
+                soLuong = +prompt("nhap so luong");
+                tinhTien = soLuong * 14000;
+                mang.push(tinhTien);
+                alert("số tiền là "+tinhTien);
+                break;
+        }
+    }while (luaChon!=7);
+    for (let i = 0; i <mang.length ; i++) {
+        tongTien+=mang[i];
+    }
+    alert("số tiền tất cả món bạn đã gọi là "+tongTien);
+
+</script>
+</body>
+</html>

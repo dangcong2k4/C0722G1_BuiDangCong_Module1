@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function maxFraction(numerators,denominators) {
+        let max = 0;
+        let viTri = 0;
+        for (let i = numerators.length-1; i >=0 ; i--) {
+            if(numerators[i]/denominators[i] > max){
+                max = numerators[i]/denominators[i];
+                viTri = i;
+            }
+        }
+        let n = numerators[viTri]+"/"+denominators[viTri]+" là phân số lớn nhất, có chỉ số là "+viTri;
+        return n;
+
+    }
+    let array1 = [1,7,3,8,4,6,9]
+    let array2 = [2,8,3,5,5,8,4]
+   document.write(maxFraction(array1,array2)) ;
+</script>
+</body>
+</html>
