@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+      let arr = prompt("hãy nhập xâu ký tự : ")
+      let count = 0;
+      let arr1 = [];
+      for (let i = 0; i <arr.length ; i++) {
+          if (arr1.includes(arr[i])==false){
+                arr1.push(arr[i]);
+                count ++;
+          }
+      }
+      document.write("các kí tự khác nhau là : "+arr1+"<br>");
+      document.write("vậy có " + count + " ký tự khác nhau ");
+  </script>
+</body>
+</html>

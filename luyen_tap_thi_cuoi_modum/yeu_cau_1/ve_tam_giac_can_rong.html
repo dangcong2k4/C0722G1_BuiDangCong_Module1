@@ -8,11 +8,8 @@
 <script>
     let k = 9;
     for (let i = 1; i <=k ; i++) {
-        for (let d = 1; d <= k-i ; d++) {
-            document.write("&nbsp&nbsp");
-        }
-        for (let j = 1; j <= 2 * i - 1; j++) {
-            if (j === 1 || j === i || i === (10 - 1) ) {
+        for (let j = 1; j <= 2 * k - 1; j++) {
+            if (j === k-i+1 || j === k+i-1 || i === k ) {
                 document.write("*");
             }else {
                 document.write("&nbsp&nbsp");

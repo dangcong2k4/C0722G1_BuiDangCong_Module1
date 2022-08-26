@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function transfer(str) {
+        str = str.toLowerCase();
+        let newStr = str.split(" ");
+        let newStr1=[];
+        for (let i = 0; i < newStr.length; i++) {
+            if(newStr[i] !== ""){
+                newStr1.push(newStr[i].split(""));
+            }
+        }
+        for (let i = 0; i < newStr1.length; i++) {
+            newStr1[i][0] = newStr1[i][0].toUpperCase();
+            newStr1[i]= newStr1[i].join("");
+        }
+        return newStr1.join(" ");
+    }
+
+
+    function timTuDaiNhat(chuoi){
+        let chuoi1 = transfer(chuoi);
+        let mangChu = chuoi1.split(" ");
+        let chuDaiNhat = "";
+        let max = 0;
+        for (let i = 0; i < mangChu.length; i++) {
+            if(mangChu[i].length>=max){
+                max = mangChu[i].length;
+                chuDaiNhat = mangChu[i];
+            }
+        }
+        return chuDaiNhat;
+
+        // alert(mangChu);
+    }
+
+
+    let str = prompt("nhập xâu vào đây ");
+    alert(transfer(str));
+    alert(timTuDaiNhat(str))
+</script>
+</body>
+</html>

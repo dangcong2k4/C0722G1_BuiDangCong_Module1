@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr =['a','a','b','c','c'];
+    let arr1 =['a','d','c','a','a'];
+    let count = 0;
+    for (let i = 0; i <arr.length ; i++) {
+        for (let j = 0; j < arr1.length; j++) {
+            if (arr[i]==arr1[j]) {
+                arr1.splice(j,);
+                count++;
+                break;
+            }
+        }
+    }
+    document.write("có " + count + " ký tự chung giữa hai mảng ");
+</script>
+</body>
+</html>
