@@ -9,7 +9,7 @@
 <input type="text" id="ten" placeholder="nhập tên máy">
 <input type="text" id="tuoi" placeholder="nhập tên hãng">
 <input type="text" id="gia" placeholder="nhập giá bán">
-<input type="button" onclick="addNewStudent()" value="Add new Student">
+<input type="button" onclick="themMayMoi()" value="Add new Student">
 <p id="display"></p>
 </body>
 <script>
@@ -55,7 +55,6 @@
             '        <th>Tên Máy</th>\n' +
             '        <th>Tên Hãng</th>\n' +
             '        <th>Giá bán</th>\n' +
-            '        <th>Xóa</th>\n' +
             '    </tr>';
         for (let i = 0; i < danhSach.length; i++) {
             bangChuoi += '<tr>\n' +
@@ -64,27 +63,19 @@
                 '        <td>' + danhSach[i].getTenMay() + '</td>\n' +
                 '        <td>' + danhSach[i].getTenHang() + '</td>\n' +
                 '        <td>' + danhSach[i].getGiaBan() + '</td>\n' +
-                '        <td><input type="button" onclick="deleteStudentById(' + i + ')" value="Xóa"></td>\n' +
                 '    </tr>';
         }
         bangChuoi += '</table>';
         document.getElementById("display").innerHTML = bangChuoi;
     }
-    function deleteStudentById(index) {
-        let kiemTra = confirm("Bạn có muốn xoá máy tên: " + danhSachMay[index].getTen());
-        if (kiemTra) {
-            danhSachMay.splice(index,1);
-        }
-        display(danhSachMay);
-    }
 
-    function addNewStudent() {
+    function themMayMoi() {
         let maMay = document.getElementById("sbd").value;
         let tenMay = document.getElementById("ten").value;
         let tenHang = document.getElementById("tuoi").value;
         let giaBan = document.getElementById("gia").value;
-        let newStudent = new MayTinh(maMay,tenMay,tenHang,giaBan);
-        danhSachMay.push(newStudent);
+        let themMay = new MayTinh(maMay,tenMay,tenHang,giaBan);
+        danhSachMay.push(themMay);
         display(danhSachMay);
         document.getElementById("sbd").value="";
         document.getElementById("ten").value="";
