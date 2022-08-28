@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="sbd" placeholder="nhập mã máy">
+<input type="text" id="ten" placeholder="nhập tên máy">
+<input type="text" id="tuoi" placeholder="nhập tên hãng">
+<input type="text" id="gia" placeholder="nhập giá bán">
+<input type="button" onclick="addNewStudent()" value="Add new Student">
+<p id="display"></p>
+</body>
+<script>
+    class MayTinh{
+        constructor(maMay,tenMay,tenHang,giaBan) {
+            this.maMay=maMay;
+            this.tenMay=tenMay;
+            this.tenHang=tenHang;
+            this.giaBan=giaBan;
+        }
+        setMaMay(maMay){
+            this.maMay=maMay;
+        }
+        setTenMay(tenMay){
+            this.tenMay=tenMay;
+        }
+        setTenHang(tenHang){
+            this.tenHang=tenHang;
+        }
+        setGiaBan(giaBan){
+            this.giaBan=giaBan;
+        }
+        getMaMay(){
+            return this.maMay;
+        }
+        getTenMay(){
+            return this.tenMay;
+        }
+        getTenHang(){
+            return this.tenHang;
+        }
+        getGiaBan(){
+            return this.giaBan;
+        }
+    }
+    let danhSachMay = [];
+    display(danhSachMay);
+    function display(danhSach) {
+        let bangChuoi = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã máy</th>\n' +
+            '        <th>Tên Máy</th>\n' +
+            '        <th>Tên Hãng</th>\n' +
+            '        <th>Giá bán</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            bangChuoi += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i].getMaMay() + '</td>\n' +
+                '        <td>' + danhSach[i].getTenMay() + '</td>\n' +
+                '        <td>' + danhSach[i].getTenHang() + '</td>\n' +
+                '        <td>' + danhSach[i].getGiaBan() + '</td>\n' +
+                '        <td><input type="button" onclick="deleteStudentById(' + i + ')" value="Xóa"></td>\n' +
+                '    </tr>';
+        }
+        bangChuoi += '</table>';
+        document.getElementById("display").innerHTML = bangChuoi;
+    }
+    function deleteStudentById(index) {
+        let kiemTra = confirm("Bạn có muốn xoá máy tên: " + danhSachMay[index].getTen());
+        if (kiemTra) {
+            danhSachMay.splice(index,1);
+        }
+        display(danhSachMay);
+    }
+
+    function addNewStudent() {
+        let maMay = document.getElementById("sbd").value;
+        let tenMay = document.getElementById("ten").value;
+        let tenHang = document.getElementById("tuoi").value;
+        let giaBan = document.getElementById("gia").value;
+        let newStudent = new MayTinh(maMay,tenMay,tenHang,giaBan);
+        danhSachMay.push(newStudent);
+        display(danhSachMay);
+        document.getElementById("sbd").value="";
+        document.getElementById("ten").value="";
+        document.getElementById("tuoi").value="";
+        document.getElementById("gia").value="";
+    }
+</script>
+
+</html>
