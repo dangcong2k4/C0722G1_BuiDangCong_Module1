@@ -6,41 +6,43 @@
 </head>
 <body>
 <script>
-    let fibonacci = 0;
-    let fibonacci1 = [];
-    let fibonacci2 = [];
-    let number1 = 0;
-    let number2 = 1;
-    let n = +prompt("mhập độ dài mảng ");
-    let arr = new Array(n);
-    for (let i = 0; i <arr.length ; i++) {
-        let nhap = +prompt("nhập phần tử mảng ");
-        arr[i]=nhap;
-    }
-    for (let i = 0; i < 1000; i++){
-        fibonacci = number2 + number1;
-        number1 = number2;
-        number2 = fibonacci;
-        fibonacci1.push(fibonacci);
-    }
-    for (let i = 0; i <arr.length ; i++) {
-        for (let j = 0; j <fibonacci1.length ; j++) {
-            if(arr[i]==fibonacci1[j]){
-                fibonacci2.push(arr[i]);
+
+
+
+    let arr = [1,5,6,13,9,12,8,0,5,1];
+    function fibonacci(array) {
+        let fibonacci = 0;
+        let fibonacci1 = [];
+        let fibonacci2 = [];
+        let number1 = 0;
+        let number2 = 1;
+        for (let i = 0; i < 20; i++){
+            fibonacci1.push(fibonacci);
+            fibonacci = number2 + number1;
+            number1 = number2;
+            number2 = fibonacci;
+        }
+        for (let i = 0; i <array.length ; i++) {
+            for (let j = 0; j <fibonacci1.length ; j++) {
+                if(array[i]==fibonacci1[j]){
+                    fibonacci2.push(array[i]);
+                }
             }
         }
-    }
-    let less = fibonacci2[0];
-    for (let i = 0; i <fibonacci2.length ; i++) {
-        for ( let j = 0;j < fibonacci2.length; j++){
-            if (fibonacci2[i] < fibonacci2[j]) {
-                less = fibonacci2[j];
-                fibonacci2[j] = fibonacci2[i];
-                fibonacci2[i] = less;
+        let less = fibonacci2[0];
+        for (let i = 0; i <fibonacci2.length ; i++) {
+            for ( let j = 0;j < fibonacci2.length; j++){
+                if (fibonacci2[i] < fibonacci2[j]) {
+                    less = fibonacci2[j];
+                    fibonacci2[j] = fibonacci2[i];
+                    fibonacci2[i] = less;
+                }
             }
         }
+        return fibonacci2
     }
-    document.write(fibonacci2);
+    document.write(fibonacci(arr))
+    
 </script>
 </body>
 </html>
